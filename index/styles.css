@@ -98,7 +98,7 @@ ul li a.active {
 ul li a:hover {
   background-color:#fff;
   color: #1a3cb9;
-  border: #1a3cb9;
+  border: 1px solid #0f1d4a;
 }
 
 .sidebar {
