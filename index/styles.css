@@ -440,6 +440,8 @@ footer p { color:var(--color-text); max-width:none; }
   .etiquette-cards { grid-template-columns:1fr 1fr; }
   .term-cards      { grid-template-columns:1fr; }
   .rule-banner     { font-size:.85rem; padding:.9rem 1rem; }
+  .modules-grid { display:grid; grid-template-columns:auto auto; gap:1rem; margin-top:1.4rem; justify-items: center; text-align: center;}
+
 }
 
 /* Narrow screens: stack sidebar on top */
@@ -454,4 +456,21 @@ footer p { color:var(--color-text); max-width:none; }
   .sidebar-footer { display: none; }
   .topbar { padding: 1.2rem 1.2rem 1.5rem; }
   .page-body { padding: 1.5rem 1.2rem; }
+  .modules-grid { display:grid; grid-template-columns:auto auto; gap:1rem; margin-top:1.4rem; justify-items: center; text-align: center;}
+  nav ul{
+    display:grid; 
+    grid-template-columns:auto;
+    gap: 1px;
+    text-align: center;
+    padding: 10px 10px;
+    text-decoration: none;
+    border-radius: 5px;
+    color: #cbd6e7;
+    font-weight: 500;
+    font-size: 15px;
+    white-space: nowrap;
+  }
+  .topbar h1 {
+    max-width: 400px;
+  }
 }
