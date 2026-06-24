@@ -258,7 +258,7 @@ h1 { font-family:var(--font-family); font-weight:900; font-size:clamp(1.6rem,3vw
 h2 { font-family:var(--font-family); font-weight:700; font-size:1.55rem; color:var(--terracotta); margin-bottom:.7rem; margin-top:1.8rem; padding-bottom:.35rem; border-bottom:2px solid var(--gold); display:inline-block; }
 h3 { font-family:var(--font-family); font-weight:600; font-size:1.15rem; color:var(--forest); margin:1.5rem 0 .45rem; }
 h4 { font-family:var(--font-family); font-weight:600; font-size:.9rem; text-transform:uppercase; letter-spacing:.07em; color:var(--muted); margin:1.3rem 0 .4rem; }
-p  { margin-bottom:1rem; color:var(--ink); max-width:66ch; }
+p  { margin-bottom:.5rem; color:var(--ink);}
 
 ul, ol { padding-left:1.4rem; margin-bottom:1rem; }
 li { margin-bottom:.35rem; line-height:1.65; }
@@ -287,17 +287,18 @@ a:hover { color:var(--terracotta); text-decoration-color:var(--terracotta); }
 .welcome-card h2 { margin-top:0; }
 
 /* ── Module grid (home page) ── */
-.modules-grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(190px,1fr)); gap:1rem; margin-top:1.4rem; }
+.modules-grid { display:grid; grid-template-columns:auto auto auto auto; gap:1rem; margin-top:1.4rem; }
 .module-card {
   background:var(--warm-white); border:1.5px solid var(--border);
-  border-radius:var(--radius-md); padding:1.2rem 1.1rem;
+  border-radius:var(--radius-md); padding:.5rem;
   cursor:pointer; transition:box-shadow .18s, transform .18s, border-color .18s;
   text-decoration:none; display:block; color:var(--ink);
+  justify-items: center;
 }
 .module-card:hover { box-shadow:var(--shadow-md); transform:translateY(-3px); border-color:var(--amber); color:var(--ink); text-decoration:none; }
 .module-card .icon { font-size:1.7rem; margin-bottom:.45rem; }
 .module-card h3 { font-size:.88rem; color:var(--terracotta); margin:0 0 .25rem; }
-.module-card p { font-size:.78rem; color:var(--muted); margin:0; max-width:none; }
+.module-card p { font-size:.78rem; color:var(--muted); max-width:none; }
 
 /* ── Placeholder (content coming soon) ── */
 .placeholder { background:var(--warm-white); border:1.5px dashed var(--border); border-radius:var(--radius-md); padding:1.3rem; color:var(--muted); font-style:italic; font-size:.88rem; text-align:center; margin:.5rem 0 1.2rem; }

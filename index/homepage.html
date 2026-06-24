@@ -28,8 +28,8 @@
                     </ul>
                 </nav>
         </header>
-                <section id="intro">
-                            <div class="welcome-card">
+                <section id="intro" class="welcome-card">
+                            <div>
                             <h2 style="margin-top:0">Welcome to Digital Bridges: Inclusive Digital Literacy Training for Communities in Zambia.</h2>
                             <p>As technology continues to transform how people communicate, learn, work, access services, and conduct business, digital skills have become essential for participation in modern society. However, many individuals and communities still face barriers to accessing and effectively using digital technologies. This training program has been developed to help bridge that gap by providing practical, accessible, and inclusive digital literacy education tailored to the needs of diverse communities across Zambia.</p><br>
                             <p>Digital Bridges aims to empower participants with the knowledge, skills, and confidence required to navigate the digital world safely, responsibly, and productively. Whether using a smartphone to communicate with family, accessing online information for education, conducting mobile money transactions, searching for employment opportunities, or promoting a small business online, digital literacy opens doors to new opportunities for personal and community development.</p><br>
@@ -57,6 +57,61 @@
         <footer>
             <p>&copy; 2026 Zambian Cyber Security Initiative Foundation</p>
         </footer>
-        </div>       
+        </div>
+        <script>
+  const pageTitles = {
+    home: 'Digital Bridges: Inclusive Digital Literacy Training for Communities in Zambia',
+    intro: 'Introduction to Digital Literacy',
+    safety: 'Online Safety and Cyber Hygiene',
+    communication: 'Digital Communication and Collaboration',
+    inform: 'Information and Media Literacy',
+    financial: 'Digital Financial Literacy',
+    productivity: 'Productivity and Work Readiness',
+    entrepreneurship: 'Digital Entrepreneurship',
+    citizenship: 'Responsible Digital Citizenship',
+  };
+
+  // Scam card reveal
+  function toggleScam(card) {
+    card.classList.toggle('revealed');
+  }
+
+  // Checklist score counter (all checklists)
+  const checklistMap = {
+    'email-checklist':     { scoreId: 'email-checklist-score',     label: 'tasks completed' },
+    'msg-checklist':       { scoreId: 'msg-checklist-score',       label: 'tasks completed' },
+    'vc-checklist':        { scoreId: 'vc-checklist-score',        label: 'tasks completed' },
+    'team-checklist':      { scoreId: 'team-checklist-score',      label: 'tasks completed' },
+    'cyber-checklist':     { scoreId: 'checklist-score',           label: 'habits selected' },
+    'warning-checklist':   { scoreId: 'warning-checklist-score',   label: 'questions considered' },
+    'mm-checklist':        { scoreId: 'mm-checklist-score',        label: 'habits selected' },
+    'cv-checklist':        { scoreId: 'cv-checklist-score',        label: 'tasks completed' },
+    'wellbeing-checklist': { scoreId: 'wellbeing-checklist-score', label: 'habits selected' },
+  };
+  document.addEventListener('change', function(e) {
+    const parent = e.target.closest('[id]');
+    if (!parent || !checklistMap[parent.id]) return;
+    const boxes = parent.querySelectorAll('input[type="checkbox"]');
+    const checked = [...boxes].filter(b => b.checked).length;
+    const { scoreId, label } = checklistMap[parent.id];
+    document.getElementById(scoreId).textContent = checked + ' / ' + boxes.length + ' ' + label;
+  });
+
+  function showPage(id, linkEl) {
+    document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
+    document.getElementById('page-' + id).classList.add('active');
+    document.getElementById('page-title').textContent = pageTitles[id];
+    document.querySelectorAll('.sidebar nav a').forEach(a => a.classList.remove('active'));
+    // If called from a module card (linkEl=null), find the matching sidebar link
+    if (linkEl) {
+      linkEl.classList.add('active');
+    } else {
+      const match = document.querySelector(`.sidebar nav a[onclick*="'${id}'"]`);
+      if (match) match.classList.add('active');
+    }
+    document.querySelector('.main-area').scrollTo({ top: 0, behavior: 'smooth' });
+    return false;
+  }
+</script>       
     </body>
 </html>
