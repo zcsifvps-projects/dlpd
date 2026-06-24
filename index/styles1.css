@@ -66,41 +66,6 @@ body {
 }
 
 /* ── Sidebar ── */
-nav ul{
-  list-style-type: none;
-  display: inline-block;
-  margin: .25rem;
-  overflow: hidden;
-}
-
-nav ul li {
-  float: left;
-  padding: 5px;
-}
-
-ul li a {
-  display: block;
-  text-align: center;
-  padding: 10px 10px;
-  text-decoration: none;
-  background-color:#1a2540;
-  border-radius: 5px;
-  color: #cbd6e7;
-  font-weight: 500;
-  font-size: 15px;
-  white-space: nowrap;
-}
-
-ul li a.active {
-  background-color:#1a3cb9;
-}
-
-ul li a:hover {
-  background-color:#fff;
-  color: #1a3cb9;
-  border: #1a3cb9;
-}
-
 .sidebar {
   width: var(--sidebar-w);
   flex-shrink: 0;
@@ -108,7 +73,6 @@ ul li a:hover {
   display: flex;
   flex-direction: column;
   overflow-y: auto;
-  float: right;
 }
 
 .sidebar-brand {
@@ -124,15 +88,11 @@ ul li a:hover {
 }
 
 .sidebar-brand .logo-icon {
-  padding: 15px;
+  width: 36px; height: 36px;
   background: var(--gold);
   border-radius: 8px;
   display: flex; align-items: center; justify-content: center;
   font-size: 1.1rem; flex-shrink: 0;
-}
-.sidebar-brand img{
-  max-width: 75px;
-  max-height: 75px;
 }
 
 .sidebar-brand .logo-text {
@@ -141,7 +101,6 @@ ul li a:hover {
   font-size: 1.05rem;
   color: #fff;
   line-height: 1.2;
-  margin: 25px;
 }
 
 .sidebar-brand .tagline {
@@ -220,7 +179,6 @@ ul li a:hover {
   line-height: 1.2;
   letter-spacing: -.01em;
   max-width: 760px;
-  white-space: normal;
 }
 
 .topbar h1::after {
@@ -234,11 +192,7 @@ ul li a:hover {
 
 /* ── Page content ── */
 .page { display: none; flex: 1; }
-.page.active { 
-  display: flex; 
-  flex-direction: column; 
-  max-width: fit-content;
-}
+.page.active { display: flex; flex-direction: column; }
 
 .page-body {
   flex: 1;

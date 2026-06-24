@@ -8,22 +8,29 @@
 </head>
 <body>
     <header>
-        <nav>
-            <ul>
-                <li><a href="homepage.html"></a>Home</li>
-                <li><a href="intro.html">Introduction to Digital Literacy</a></li>
-                <li><a href="safety.html">Online Safety and Cyber Hygiene</a></li>
-                <li><a href="communication.html">Digital Communication and Collaboration</a></li>
-                <li><a href="inform.html">Information and Media Literacy</a></li>
-                <li><a href="financial.html">Digital Financial Literacy</a></li>
-                <li><a href="productivity.html">Productivity and Work Readiness</a></li>
-                <li><a href="entrepreneurship.html">Digital Entrepreneurship</a></li>
-                <li><a href="citizenship.html">Responsible Digital Citizenship</a></li>
-            </ul>
-        </nav>
-    </header>
-    <section>
-        <h1>Online Safety and Cyber Hygiene</h1>
+            <div class="kente-bar"></div>
+            <div class="main-area">
+                <div class="topbar">
+                <h1 id="page-title">Digital Literacy Training for Communities in Zambia</h1>
+                </div>
+            <div class="shell">
+                <nav>
+                    <ul>
+                        <li><a href="homepage.html" onclick="showPage('home',this)"><span class="nav-icon">🏠</span>Home</a></li>
+                        <li><a href="intro.html" onclick="showPage('intro',this)"><span class="nav-icon">💻</span>Intro to Digital Literacy</a></li>
+                        <li><a href="safety.html" onclick="showPage('safety',this)"class="active"><span class="nav-icon">🔒</span>Online Safety</a></li>
+                        <li><a href="communication.html" onclick="showPage('communication',this)"><span class="nav-icon">💬</span>Digital Communication</a></li>
+                        <li><a href="inform.html" onclick="showPage('inform',this)"><span class="nav-icon">📰</span>Information Literacy</a></li>
+                        <li><a href="financial.html" onclick="showPage('financial',this)"><span class="nav-icon">💳</span>Financial Literacy</a></li>
+                        <li><a href="productivity.html" onclick="showPage('productivity',this)"><span class="nav-icon">📋</span>Productivity</a></li>
+                        <li><a href="entrepreneurship.html" onclick="showPage('entrepreneurship',this)"><span class="nav-icon">🚀</span>Entrepreneurship</a></li>
+                        <li><a href="citizenship.html" onclick="showPage('citizenship',this)"><span class="nav-icon">🌍</span>Digital Citizenship</a></li>
+                    </ul>
+                </nav>
+            <!--<h1>Digital Bridges: Inclusive Digital Literacy Training for Communities in Zambia</h1>-->
+        </header>
+    <section class="welcome-card">
+            <h2 style="margin-top:0">Online Safety and Cyber Hygiene</h2>
             <p><strong>Module Objective:</strong> To enable participants to protect themselves, their personal information, and their digital devices from online threats by practicing safe and responsible digital behavior.</p>
           <h4>Learning Outcomes</h4>
           <p>By the end of this module, participants will be able to:</p>
@@ -35,7 +42,7 @@
               <li>Apply safe online practices when using digital devices and internet services.</li>
             </ul>
     </section>
-    <section>
+    <section class="welcome-card">
         <h2>Password Management</h2>
             <h3>What is a Password?</h3>
                 <p>A password is a secret combination of letters, numbers, and symbols used to protect access to digital accounts and devices. Passwords help prevent unauthorized individuals from accessing personal information, financial accounts, emails, and social media profiles.</p>
@@ -103,7 +110,7 @@
                     <p><strong>Favourite object + Symbol + Number + Memorable phrase</strong></p>
                     <p>Example: <code>Baobab@2026Grow</code></p>
     </section>
-    <section>
+    <section class="welcome-card">
         <h2>Scam and Phishing Awareness</h2>
             <h3>What is an Online Scam?</h3>
                 <p>An online scam is an attempt by criminals to trick people into giving away money, personal information, or access to accounts.</p>
@@ -163,7 +170,7 @@
                 <p><strong>"URGENT: Your account will be suspended in 2 hours. Click here to verify: bit.ly/acct-verify99"</strong></p>
                 <p><strong>Answer:</strong>Fraudulent — creates urgency and uses a suspicious shortened link.</p>
     </section>
-    <section>
+    <section class="welcome-card">
         <h2>Social Media Safety</h2>
             <h3>Understanding Social Media Risks</h3>
                 <p>Social media platforms allow people to connect and share information, but they can also expose users to risks including identity theft, online harassment, scams, misinformation, and privacy breaches.</p>
@@ -198,7 +205,7 @@
                  <h4>Practical Exercise</h4>
                     <p>Review privacy settings on your social media accounts and make appropriate adjustments. Check who can view your profile, see your posts, and contact you.</p>
     </section>
-    <section>
+    <section class="welcome-card">
         <h2>Privacy and Data Protection</h2>
             <h3>What is Personal Information?</h3>
             <p>Personal information is any information that can identify an individual. Examples include full name, phone number, address, national ID number, bank account details, and photographs.</p>
@@ -264,7 +271,7 @@
                     </tbody>
                 </table>
     </section>
-    <section>
+    <section class="welcome-card">
         <h2>Safe Online Behavior</h2>
             <h3>What is Cyber Hygiene?</h3>
                 <p>Cyber hygiene refers to routine practices that help maintain digital security and reduce online risks. Just as personal hygiene protects health, cyber hygiene protects digital safety.</p>
@@ -311,7 +318,7 @@
                     <li>Respect intellectual property and copyright</li>
                     <li>Use technology ethically</li>
                 </ul>
-            <section class="activity-box">
+            <section class="activity-box" class="welcome-card">
             <h4>Practical Exercise</h4>
                 <p>Build your personal cyber safety checklist by ticking the habits you commit to practicing:</p>
                 <section class="checklist" id="cyber-checklist">
@@ -328,7 +335,7 @@
                 </section>
                     <p class="checklist-score" id="checklist-score">0 / 10 habits selected</p>
             </section>
-            <section>
+            <section class="welcome-card">
                 <h2>Key Takeaways</h2>
                     <div class="takeaways-grid">
                         <div class="takeaway-card"><span class="takeaway-icon">🔐</span><p>Strong passwords are the first line of defense against cyber threats.</p></div>
@@ -339,7 +346,7 @@
                         <div class="takeaway-card"><span class="takeaway-icon">🤝</span><p>Responsible online behavior contributes to a safer digital environment for everyone.</p></div>
                     </div>
             </section>
-            <section>
+            <section class="welcome-card">
                 <h2>Module Assessment</h2>
                     <p>Participants should be able to:</p>
                     <ul>

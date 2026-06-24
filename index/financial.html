@@ -8,24 +8,158 @@
 </head>
 <body>
     <header>
-        <nav>
-            <ul>
-                <li><a href="homepage.html"></a>Home</li>
-                <li><a href="intro.html">Introduction to Digital Literacy</a></li>
-                <li><a href="safety.html">Online Safety and Cyber Hygiene</a></li>
-                <li><a href="communication.html">Digital Communication and Collaboration</a></li>
-                <li><a href="inform.html">Information and Media Literacy</a></li>
-                <li><a href="financial.html">Digital Financial Literacy</a></li>
-                <li><a href="productivity.html">Productivity and Work Readiness</a></li>
-                <li><a href="entrepreneurship.html">Digital Entrepreneurship</a></li>
-                <li><a href="citizenship.html">Responsible Digital Citizenship</a></li>
-            </ul>
-        </nav>
-    </header>
-    <section><h2>Mobile Money Safety</h2></section>
-    <section><h2>Digital Payments</h2></section>
-    <section><h2>Fraud Awareness</h2></section>
-    <section><h2>Safe Online Transactions</h2></section>    
+            <div class="kente-bar"></div>
+            <div class="main-area">
+                <div class="topbar">
+                <h1 id="page-title">Digital Literacy Training for Communities in Zambia</h1>
+                </div>
+            <div class="shell">
+                <nav>
+                    <ul>
+                      <li><a href="homepage.html" onclick="showPage('home',this)"><span class="nav-icon">🏠</span>Home</a></li>
+                      <li><a href="intro.html" onclick="showPage('intro',this)"><span class="nav-icon">💻</span>Intro to Digital Literacy</a></li>
+                      <li><a href="safety.html" onclick="showPage('safety',this)"><span class="nav-icon">🔒</span>Online Safety</a></li>
+                      <li><a href="communication.html" onclick="showPage('communication',this)"><span class="nav-icon">💬</span>Digital Communication</a></li>
+                      <li><a href="inform.html" onclick="showPage('inform',this)"><span class="nav-icon">📰</span>Information Literacy</a></li>
+                      <li><a href="financial.html" onclick="showPage('financial',this)" class="active"><span class="nav-icon">💳</span>Financial Literacy</a></li>
+                      <li><a href="productivity.html" onclick="showPage('productivity',this)"><span class="nav-icon">📋</span>Productivity</a></li>
+                      <li><a href="entrepreneurship.html" onclick="showPage('entrepreneurship',this)"><span class="nav-icon">🚀</span>Entrepreneurship</a></li>
+                      <li><a href="citizenship.html" onclick="showPage('citizenship',this)"><span class="nav-icon">🌍</span>Digital Citizenship</a></li>
+                    </ul>
+                </nav>
+        </header>
+    <section class="welcome-card">
+          <h2 style="margin-top:0">Digital Financial Literacy</h2>
+          <p>Digital financial services have transformed the way people save, send, receive, and manage money. Mobile money, online banking, digital payments, and e-commerce platforms offer convenience and financial inclusion, particularly for individuals and communities with limited access to traditional banking services.</p>
+          <p>While digital financial tools provide many opportunities, users must also understand how to protect themselves from fraud, scams, and financial risks. This module equips participants with the knowledge and skills needed to use digital financial services safely and confidently.</p>
+          <h4>Learning Objectives</h4>
+          <p>By the end of this module, participants will be able to:</p>
+          <ul>
+            <li>Understand the benefits and risks of digital financial services.</li>
+            <li>Practice safe mobile money and digital payment habits.</li>
+            <li>Identify common financial scams and fraud schemes.</li>
+            <li>Conduct secure online transactions.</li>
+            <li>Protect personal and financial information.</li>
+          </ul>
+    </section>
+    <section class="welcome-card">
+          <h2>Mobile Money Safety</h2>
+          <h3>What is Mobile Money?</h3>
+          <p>Mobile money is a financial service that allows users to store, send, and receive money using a mobile phone.</p>
+          <h3>Benefits of Mobile Money</h3>
+          <ul>
+            <li>Convenient and accessible</li>
+            <li>Faster transactions</li>
+            <li>Reduced need to carry cash</li>
+            <li>Supports financial inclusion</li>
+          </ul>
+          <div class="activity-box">
+            <h4>📱 Mobile Money Safety Tips</h4>
+            <div class="checklist" id="mm-checklist">
+              <label><input type="checkbox"> Never share your PIN with anyone.</label>
+              <label><input type="checkbox"> Use strong and unique PINs.</label>
+              <label><input type="checkbox"> Confirm recipient details before sending money.</label>
+              <label><input type="checkbox"> Keep transaction records.</label>
+              <label><input type="checkbox"> Report suspicious activities immediately.</label>
+              <label><input type="checkbox"> Log out of financial applications after use.</label>
+            </div>
+            <p class="checklist-score" id="mm-checklist-score">0 / 6 habits selected</p>
+          </div>
+    </section>
+     <section class="welcome-card">
+          <h2>Digital Payments</h2>
+          <h3>What are Digital Payments?</h3>
+          <p>Digital payments involve transferring money electronically without using physical cash.</p>
+          <div class="platform-pills">
+            <span class="pill">📲 Mobile Money</span>
+            <span class="pill">🏦 Online Banking</span>
+            <span class="pill">💳 Debit/Credit Cards</span>
+            <span class="pill">👛 Digital Wallets</span>
+          </div>
+          <div class="two-col-tips">
+            <div class="tip-card tip-do">
+              <h4>&#x2713; Benefits</h4>
+              <ul>
+                <li>Convenience</li>
+                <li>Speed</li>
+                <li>Improved record keeping</li>
+                <li>Greater financial accessibility</li>
+              </ul>
+            </div>
+            <div class="tip-card tip-dont">
+              <h4>&#x2713; Best Practices</h4>
+              <ul>
+                <li>Use trusted payment platforms</li>
+                <li>Verify payment requests before sending money</li>
+                <li>Keep devices updated</li>
+                <li>Monitor account activity regularly</li>
+              </ul>
+            </div>
+          </div>
+    </section>
+    <section class="welcome-card">
+          <h2>Fraud Awareness</h2>
+          <h3>Common Types of Financial Fraud</h3>
+          <div class="term-cards">
+            <div class="term-card">
+              <h4>🎣 Phishing</h4>
+              <p>Fraudsters attempt to obtain personal or financial information through fake messages or websites.</p>
+            </div>
+            <div class="term-card">
+              <h4>📲 Mobile Money Scams</h4>
+              <p>Scammers may pretend to have sent money mistakenly and ask for refunds.</p>
+            </div>
+            <div class="term-card">
+              <h4>📈 Investment Scams</h4>
+              <p>Promises of unusually high returns with little or no risk.</p>
+            </div>
+            <div class="term-card">
+              <h4>🪪 Identity Theft</h4>
+              <p>Criminals use stolen personal information to conduct fraudulent activities.</p>
+            </div>
+          </div>
+          <h3>Warning Signs</h3>
+          <ul>
+            <li>Urgent requests for money</li>
+            <li>Unsolicited offers</li>
+            <li>Requests for PINs or passwords</li>
+            <li>Deals that seem too good to be true</li>
+          </ul>
+    </section>
+    <section class="welcome-card">
+          <h2>Safe Online Transactions</h2>
+          <table>
+            <thead><tr><th>Stage</th><th>What To Do</th></tr></thead>
+            <tbody>
+              <tr><td>Before the Transaction</td><td>Verify the seller or service provider; check website legitimacy; read reviews and ratings; confirm payment details carefully.</td></tr>
+              <tr><td>During the Transaction</td><td>Use secure internet connections; avoid public Wi-Fi for financial transactions; verify transaction confirmations.</td></tr>
+              <tr><td>After the Transaction</td><td>Keep receipts and records; review account statements; report unauthorized activities immediately.</td></tr>
+            </tbody>
+          </table>
+    </section>
+    <section class="welcome-card">
+          <h2>Practical Activity</h2>
+          <div class="activity-box">
+            <h4>🏃 Practical Exercise</h4>
+            <p>Review examples of digital financial scenarios and identify safe and unsafe practices.</p>
+          </div>
+    </section>
+    <section class="welcome-card">
+          <h2>Key Takeaways</h2>
+          <div class="takeaways-grid">
+            <div class="takeaway-card"><span class="takeaway-icon">🔐</span><p>Protect PINs and passwords.</p></div>
+            <div class="takeaway-card"><span class="takeaway-icon">✅</span><p>Verify financial information before acting.</p></div>
+            <div class="takeaway-card"><span class="takeaway-icon">⚠️</span><p>Be cautious of scams and fraud.</p></div>
+            <div class="takeaway-card"><span class="takeaway-icon">💳</span><p>Use trusted digital payment platforms.</p></div>
+            <div class="takeaway-card"><span class="takeaway-icon">📊</span><p>Monitor financial transactions regularly.</p></div>
+          </div>
+          <div class="rule-banner" style="margin-top:1.6rem;">
+            <span>Protect Your Money</span><span class="rule-arrow">·</span><span>Protect Your Information</span>
+          </div>
+    </section>
+      </div>
+      <footer><p>&copy; 2026 Zambian Cyber Security Initiative Foundation</p></footer>
+    </div>
     <footer>
         <p>&copy; 2026 Zambian Cyber Security Initiative Foundation</p>
     </footer>

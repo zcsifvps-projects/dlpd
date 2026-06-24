@@ -8,22 +8,29 @@
 </head>
 <body>
     <header>
+        <div class="kente-bar"></div>
+            <div class="main-area">
+                <div class="topbar">
+                <h1 id="page-title">Digital Literacy Training for Communities in Zambia</h1>
+                </div>
+            <div class="shell">
         <nav>
             <ul>
-                <li><a href="homepage.html"></a>Home</li>
-                <li><a href="intro.html">Introduction to Digital Literacy</a></li>
-                <li><a href="safety.html">Online Safety and Cyber Hygiene</a></li>
-                <li><a href="communication.html">Digital Communication and Collaboration</a></li>
-                <li><a href="inform.html">Information and Media Literacy</a></li>
-                <li><a href="financial.html">Digital Financial Literacy</a></li>
-                <li><a href="productivity.html">Productivity and Work Readiness</a></li>
-                <li><a href="entrepreneurship.html">Digital Entrepreneurship</a></li>
-                <li><a href="citizenship.html">Responsible Digital Citizenship</a></li>
+                <li><a href="homepage.html" onclick="showPage('home',this)"><span class="nav-icon">🏠</span>Home</a></li>
+                <li><a href="intro.html" onclick="showPage('intro',this)"><span class="nav-icon">💻</span>Intro to Digital Literacy</a></li>
+                <li><a href="safety.html" onclick="showPage('safety',this)"><span class="nav-icon">🔒</span>Online Safety</a></li>
+                <li><a href="communication.html" onclick="showPage('communication',this)" class="active"><span class="nav-icon">💬</span>Digital Communication</a></li>
+                <li><a href="inform.html" onclick="showPage('inform',this)"><span class="nav-icon">📰</span>Information Literacy</a></li>
+                <li><a href="financial.html" onclick="showPage('financial',this)"><span class="nav-icon">💳</span>Financial Literacy</a></li>
+                <li><a href="productivity.html" onclick="showPage('productivity',this)"><span class="nav-icon">📋</span>Productivity</a></li>
+                <li><a href="entrepreneurship.html" onclick="showPage('entrepreneurship',this)"><span class="nav-icon">🚀</span>Entrepreneurship</a></li>
+                <li><a href="citizenship.html" onclick="showPage('citizenship',this)"><span class="nav-icon">🌍</span>Digital Citizenship</a></li>
             </ul>
         </nav>
     </header>
     <section>
-          <h1>Digital Communication and Collaboration</h1>
+        <div class="welcome-card">
+            <h2 style="margin-top:0">Digital Communication and Collaboration</h2>
             <p><strong>Module Objective:</strong> To equip participants with the knowledge and skills to communicate effectively, collaborate productively, and engage responsibly using digital communication tools and platforms.</p>
             <h4>Learning Outcomes</h4>
             <p>By the end of this module, participants will be able to:</p>
@@ -182,7 +189,7 @@
             </div>
         </section>
     </section>
-    <section>
+    <section class="welcome-card">
         <h2>Video Conferencing Tools</h2>
             <h3>What is Video Conferencing?</h3>
             <p>Video conferencing allows people to communicate through live video and audio over the internet. It enables virtual meetings, training sessions, interviews, and collaboration regardless of location.</p>
@@ -241,7 +248,7 @@
                 <p class="checklist-score" id="vc-checklist-score">0 / 4 tasks completed</p>
             </div>
     </section>
-    <section>
+    <section class="welcome-card">
         <h2>Digital Teamwork and Collaboration</h2>
             <h3>What is Digital Collaboration?</h3>
                 <p>Digital collaboration occurs when people work together using digital tools to achieve shared goals — in community projects, business activities, school assignments, and team planning.</p>
@@ -318,8 +325,11 @@
                 <li>What practices help ensure successful virtual meetings?</li>
                 <li>What qualities contribute to effective digital teamwork?</li>
             </ol>
-        </section>  
+        </section>
+        </div>
     </section>
+    </div>
+    </div>
     <footer>
         <p>&copy; 2026 Zambian Cyber Security Initiative Foundation</p>
     </footer>

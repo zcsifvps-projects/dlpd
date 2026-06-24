@@ -8,24 +8,28 @@
 </head>
 <body>
     <header>
+        <div class="kente-bar"></div>
+            <div class="main-area">
+                <div class="topbar">
+                <h1 id="page-title">Digital Literacy Training for Communities in Zambia</h1>
+                </div>
+            <div class="shell">
         <nav>
             <ul>
-                <li><a href="homepage.html"></a>Home</li>
-                <li><a href="intro.html">Introduction to Digital Literacy</a></li>
-                <li><a href="safety.html">Online Safety and Cyber Hygiene</a></li>
-                <li><a href="communication.html">Digital Communication and Collaboration</a></li>
-                <li><a href="inform.html">Information and Media Literacy</a></li>
-                <li><a href="financial.html">Digital Financial Literacy</a></li>
-                <li><a href="productivity.html">Productivity and Work Readiness</a></li>
-                <li><a href="entrepreneurship.html">Digital Entrepreneurship</a></li>
-                <li><a href="citizenship.html">Responsible Digital Citizenship</a></li>
+                <li><a href="homepage.html" onclick="showPage('home',this)"><span class="nav-icon">🏠</span>Home</a></li>
+                <li><a href="intro.html" onclick="showPage('intro',this)"><span class="nav-icon">💻</span>Intro to Digital Literacy</a></li>
+                <li><a href="safety.html" onclick="showPage('safety',this)"><span class="nav-icon">🔒</span>Online Safety</a></li>
+                <li><a href="communication.html" onclick="showPage('communication',this)"><span class="nav-icon">💬</span>Digital Communication</a></li>
+                <li><a href="inform.html" onclick="showPage('inform',this)"><span class="nav-icon">📰</span>Information Literacy</a></li>
+                <li><a href="financial.html" onclick="showPage('financial',this)"><span class="nav-icon">💳</span>Financial Literacy</a></li>
+                <li><a href="productivity.html" onclick="showPage('productivity',this)" class="active"><span class="nav-icon">📋</span>Productivity</a></li>
+                <li><a href="entrepreneurship.html" onclick="showPage('entrepreneurship',this)"><span class="nav-icon">🚀</span>Entrepreneurship</a></li>
+                <li><a href="citizenship.html" onclick="showPage('citizenship',this)"><span class="nav-icon">🌍</span>Digital Citizenship</a></li>
             </ul>
         </nav>
     </header>
-    <div class="page" id="page-productivity">
-      <div class="page-body">
-        <section>
-            <h1>Productivity and Work Readiness</h1>
+        <section class="welcome-card">
+            <h2 style="margin-top:0">Productivity and Work Readiness</h2>
             <p>Digital skills are increasingly required in education, employment, and business. Employers expect workers to communicate effectively, create documents, conduct research, and complete online applications. Developing these skills enhances employability and workplace productivity.</p>
             <p>This module introduces practical digital tools that support learning, job searching, and career development.</p>
             <h4>Learning Objectives</h4>
@@ -37,7 +41,7 @@
                 <li>Develop professional CVs and digital profiles.</li>
             </ul>
         </section>
-        <section>
+        <section class="welcome-card">
             <h2>Basic Document Creation</h2>
             <h3>What is a Digital Document?</h3>
             <p>A digital document is an electronic file used to create, store, and share information.</p>
@@ -62,7 +66,7 @@
                 <div class="practice-item"><span class="practice-icon">📁</span><div><strong>Organize Files in Folders</strong><p>Makes it easy to find documents later.</p></div></div>
             </div>
         </section>
-        <section>
+        <section class="welcome-card">
             <h2>Internet Research</h2>
             <h3>What is Online Research?</h3>
             <p>Online research involves finding information using search engines and digital resources.</p>
@@ -87,7 +91,7 @@
             </div>
           </div>
         </section>
-        <section>
+        <section class="welcome-card">
             <h2>Online Applications</h2>
             <h3>Common Online Applications</h3>
             <ul>
@@ -117,7 +121,7 @@
                 </div>
             </div>
         </section>
-        <section>
+        <section class="welcome-card">
           <h2>CV and Digital Profile Development</h2>
           <h3>What is a CV?</h3>
           <p>A Curriculum Vitae (CV) summarizes a person's education, skills, and experience.</p>
@@ -163,7 +167,7 @@
                 </ul>
             </div>
         </section>
-        <section>
+        <section class="welcome-card">
             <h2>Practical Activity</h2>
             <div class="activity-box">
                 <h4>🏃 Practical Exercise</h4>
@@ -174,7 +178,7 @@
                 <p class="checklist-score" id="cv-checklist-score">0 / 2 tasks completed</p>
             </div>
         </section>
-        <section>
+        <section class="welcome-card">
             <h2>Key Takeaways</h2>
             <div class="takeaways-grid">
                 <div class="takeaway-card"><span class="takeaway-icon">💼</span><p>Digital productivity skills improve employability.</p></div>
@@ -186,6 +190,7 @@
                 <span>Your Digital Skills Are an Investment in Your Future</span>
             </div>
         </section>
+    </div>
     </div>   
     <footer>
         <p>&copy; 2026 Zambian Cyber Security Initiative Foundation</p>
