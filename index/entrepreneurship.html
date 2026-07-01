@@ -5,29 +5,37 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Digital Bridges: Digital Entrepreneurship</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=home" />
 </head>
 <body>
     <header>
-            <div class="kente-bar"></div>
-            <div class="main-area">
-                <div class="topbar">
-                <h1 id="page-title"><img src="zcsif_logo.png" width="75" height="75"> Zambian Cyber Security Initiative Foundation</h1>
-                </div>
-            <div class="shell">
-                <nav>
-                    <ul>
-                        <li><a href="index.html" onclick="showPage('home',this)"><span class="material-symbols-outlined">home</span>Home</a></li>
-                        <li><a href="intro.html" onclick="showPage('intro',this)">Intro to Digital Literacy</a></li>
-                        <li><a href="safety.html" onclick="showPage('safety',this)">Online Safety</a></li>
-                        <li><a href="communication.html" onclick="showPage('communication',this)">Digital Communication</a></li>
-                        <li><a href="inform.html" onclick="showPage('inform',this)">Information Literacy</a></li>
-                        <li><a href="financial.html" onclick="showPage('financial',this)">Financial Literacy</a></li>
-                        <li><a href="productivity.html" onclick="showPage('productivity',this)">Productivity</a></li>
-                        <li><a href="entrepreneurship.html" onclick="showPage('entrepreneurship',this)" class="active">Entrepreneurship</a></li>
-                        <li><a href="citizenship.html" onclick="showPage('citizenship',this)">Digital Citizenship</a></li>
-                    </ul>
-                </nav>
-        </header>
+        <div class="kente-bar"></div>
+        <div class="topbar">
+            <button class="menu-toggle" id="menuToggle" type="button" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="sidebar" onclick="toggleMenu()">
+                <span></span><span></span><span></span>
+            </button>
+            <h1 id="page-title"><img src="zcsif_logo.png" width="75" height="75" alt="ZCSIF logo"> Zambian Cyber Security Initiative Foundation</h1>
+        </div>
+    </header>
+    <div class="shell">
+        <div class="menu-overlay" id="menuOverlay" onclick="closeMenu()"></div>
+        <aside class="sidebar" id="sidebar">
+            <nav>
+                <ul>
+                        <li><a href="index.html" onclick="showPage('home',this); closeMenu();"><span class="material-symbols-outlined">home</span>Home</a></li>
+                        <li><a href="intro.html" onclick="showPage('intro',this); closeMenu();">Intro to Digital Literacy</a></li>
+                        <li><a href="safety.html" onclick="showPage('safety',this); closeMenu();">Online Safety</a></li>
+                        <li><a href="communication.html" onclick="showPage('communication',this); closeMenu();">Digital Communication</a></li>
+                        <li><a href="inform.html" onclick="showPage('inform',this); closeMenu();">Information Literacy</a></li>
+                        <li><a href="financial.html" onclick="showPage('financial',this); closeMenu();">Financial Literacy</a></li>
+                        <li><a href="productivity.html" onclick="showPage('productivity',this); closeMenu();">Productivity</a></li>
+                        <li><a href="entrepreneurship.html" onclick="showPage('entrepreneurship',this); closeMenu();" class="active">Entrepreneurship</a></li>
+                        <li><a href="citizenship.html" onclick="showPage('citizenship',this); closeMenu();">Digital Citizenship</a></li>
+                </ul>
+            </nav>
+        </aside>
+        <div class="main-area">
+            <div class="page-body">
         <section class="welcome-card">
             <h2 style="margin-top:0">Digital Entrepreneurship</h2>
             <p>Digital technologies provide new opportunities for individuals and small businesses to reach customers, market products, and generate income. Entrepreneurs can use digital tools to improve efficiency, expand markets, and strengthen customer relationships.</p>
@@ -41,13 +49,13 @@
                 <li>Understand the basics of e-commerce.</li>
             </ul>
             </section>
-            <section class="welcome-card">
+        <section class="welcome-card">
             <h2>Social Media Marketing</h2>
             <h3>What is Social Media Marketing?</h3>
             <p>Using social media platforms to promote products, services, and brands.</p>
             <div class="two-col-tips">
                 <div class="tip-card tip-do">
-                <h4>&#x2713; Benefits</h4>
+                <h4>✓ Benefits</h4>
                 <ul>
                     <li>Low-cost marketing</li>
                     <li>Wider audience reach</li>
@@ -56,7 +64,7 @@
                 </ul>
                 </div>
                 <div class="tip-card tip-dont">
-                <h4>&#x2713; Good Practices</h4>
+                <h4>✓ Good Practices</h4>
                 <ul>
                     <li>Share relevant content regularly</li>
                     <li>Use quality images and videos</li>
@@ -66,7 +74,7 @@
                 </div>
             </div>
             </section>
-            <section class="welcome-card">
+        <section class="welcome-card">
             <h2>Online Customer Engagement</h2>
             <h3>Why Customer Engagement Matters</h3>
             <p>Strong customer relationships increase trust and loyalty.</p>
@@ -78,7 +86,7 @@
                 <div class="practice-item"><div><strong>Encourage Customer Feedback</strong><p>Use feedback to improve products and service quality.</p></div></div>
             </div>
             </section>
-            <section class="welcome-card">
+        <section class="welcome-card">
             <h2>Digital Business Tools</h2>
             <h3>Examples of Digital Tools</h3>
             <div class="platform-pills">
@@ -95,13 +103,13 @@
                 <li>Increased productivity</li>
             </ul>
             </section>
-            <section class="welcome-card">
+        <section class="welcome-card">
             <h2>E-Commerce Basics</h2>
             <h3>What is E-Commerce?</h3>
             <p>Buying and selling goods or services online.</p>
             <div class="two-col-tips">
                 <div class="tip-card tip-do">
-                <h4>&#x2713; Benefits</h4>
+                <h4>✓ Benefits</h4>
                 <ul>
                     <li>Access to wider markets</li>
                     <li>Increased sales opportunities</li>
@@ -119,14 +127,14 @@
                 </div>
             </div>
             </section>
-            <section class="welcome-card">
+        <section class="welcome-card">
             <h2>Practical Activity</h2>
             <div class="activity-box">
                 <h4>Practical Exercise</h4>
                 <p>Develop a simple social media marketing plan for a business idea.</p>
             </div>
             </section>
-            <section class="welcome-card">
+        <section class="welcome-card">
             <h2>Key Takeaways</h2>
             <div class="takeaways-grid">
                 <div class="takeaway-card"><p>Digital tools can support business growth.</p></div>
@@ -137,12 +145,15 @@
             <div class="rule-banner" style="margin-top:1.6rem;">
                 <span>Technology Can Help Turn Ideas into Opportunities</span>
             </div>
-            </section>    
+            </section>
+            </div>
+        </div>
+    </div>
     <footer>
         <p>&copy; 2026 Zambian Cyber Security Initiative Foundation</p>
     </footer>
     <script>
-  const pageTitles = {
+const pageTitles = {
     home: 'Digital Bridges: Inclusive Digital Literacy Training for Communities in Zambia',
     intro: 'Introduction to Digital Literacy',
     safety: 'Online Safety and Cyber Hygiene',
@@ -195,6 +206,40 @@
     document.querySelector('.main-area').scrollTo({ top: 0, behavior: 'smooth' });
     return false;
   }
-</script>
+
+  // ---- Responsive navigation: hamburger dropdown (mobile) / sidebar (desktop) ----
+  function toggleMenu() {
+    const sidebar = document.getElementById('sidebar');
+    const toggle = document.getElementById('menuToggle');
+    const overlay = document.getElementById('menuOverlay');
+    const isOpen = sidebar.classList.toggle('open');
+    overlay.classList.toggle('visible', isOpen);
+    toggle.classList.toggle('active', isOpen);
+    toggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+    document.body.classList.toggle('menu-open', isOpen);
+  }
+
+  function closeMenu() {
+    const sidebar = document.getElementById('sidebar');
+    const toggle = document.getElementById('menuToggle');
+    const overlay = document.getElementById('menuOverlay');
+    sidebar.classList.remove('open');
+    overlay.classList.remove('visible');
+    toggle.classList.remove('active');
+    toggle.setAttribute('aria-expanded', 'false');
+    document.body.classList.remove('menu-open');
+  }
+
+  // Close the mobile menu automatically if the window is resized back to desktop width
+  window.addEventListener('resize', function () {
+    if (window.innerWidth > 768) closeMenu();
+  });
+
+  // Close the mobile menu when the Escape key is pressed
+  document.addEventListener('keydown', function (e) {
+    if (e.key === 'Escape') closeMenu();
+  });
+
+    </script>
 </body>
 </html>

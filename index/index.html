@@ -7,29 +7,36 @@
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=home" />
 </head>
-    <body>
-        <header>
-            <div class="kente-bar"></div>
-            <div class="main-area">
-                <div class="topbar">
-                <h1 id="page-title"><img src="zcsif_logo.png" width="75" height="75"> Zambian Cyber Security Initiative Foundation</h1>
-                </div>
-            <div class="shell">
-                <nav>
-                    <ul>
-                        <li><a href="index.html" onclick="showPage('home',this)" class="active"></span>Home</a></li>
-                        <li><a href="intro.html" onclick="showPage('intro',this)">Intro to Digital Literacy</a></li>
-                        <li><a href="safety.html" onclick="showPage('safety',this)">Online Safety</a></li>
-                        <li><a href="communication.html" onclick="showPage('communication',this)">Digital Communication</a></li>
-                        <li><a href="inform.html" onclick="showPage('inform',this)">Information Literacy</a></li>
-                        <li><a href="financial.html" onclick="showPage('financial',this)">Financial Literacy</a></li>
-                        <li><a href="productivity.html" onclick="showPage('productivity',this)">Productivity</a></li>
-                        <li><a href="entrepreneurship.html" onclick="showPage('entrepreneurship',this)">Entrepreneurship</a></li>
-                        <li><a href="citizenship.html" onclick="showPage('citizenship',this)">Digital Citizenship</a></li>
-                    </ul>
-                </nav>
-        </header>
-                <section id="intro" class="welcome-card">
+<body>
+    <header>
+        <div class="kente-bar"></div>
+        <div class="topbar">
+            <button class="menu-toggle" id="menuToggle" type="button" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="sidebar" onclick="toggleMenu()">
+                <span></span><span></span><span></span>
+            </button>
+            <h1 id="page-title"><img src="zcsif_logo.png" width="75" height="75" alt="ZCSIF logo"> Zambian Cyber Security Initiative Foundation</h1>
+        </div>
+    </header>
+    <div class="shell">
+        <div class="menu-overlay" id="menuOverlay" onclick="closeMenu()"></div>
+        <aside class="sidebar" id="sidebar">
+            <nav>
+                <ul>
+                        <li><a href="index.html" onclick="showPage('home',this); closeMenu();" class="active"><span class="material-symbols-outlined">home</span>Home</a></li>
+                        <li><a href="intro.html" onclick="showPage('intro',this); closeMenu();">Intro to Digital Literacy</a></li>
+                        <li><a href="safety.html" onclick="showPage('safety',this); closeMenu();">Online Safety</a></li>
+                        <li><a href="communication.html" onclick="showPage('communication',this); closeMenu();">Digital Communication</a></li>
+                        <li><a href="inform.html" onclick="showPage('inform',this); closeMenu();">Information Literacy</a></li>
+                        <li><a href="financial.html" onclick="showPage('financial',this); closeMenu();">Financial Literacy</a></li>
+                        <li><a href="productivity.html" onclick="showPage('productivity',this); closeMenu();">Productivity</a></li>
+                        <li><a href="entrepreneurship.html" onclick="showPage('entrepreneurship',this); closeMenu();">Entrepreneurship</a></li>
+                        <li><a href="citizenship.html" onclick="showPage('citizenship',this); closeMenu();">Digital Citizenship</a></li>
+                </ul>
+            </nav>
+        </aside>
+        <div class="main-area">
+            <div class="page-body">
+        <section id="intro" class="welcome-card">
                             <div>
                             <h2 style="margin-top:0">Welcome to Digital Bridges: Inclusive Digital Literacy Training for Communities in Zambia!</h2>
                             <p>As technology continues to transform how people communicate, learn, work, access services, and conduct business, digital skills have become essential for participation in modern society. However, many individuals and communities still face barriers to accessing and effectively using digital technologies. Zambian Cyber Security Initiative Foundation has developed this training program to help bridge that gap by providing practical, accessible, and inclusive digital literacy education tailored to the needs of diverse communities across Zambia.</p><br>
@@ -39,28 +46,28 @@
                             <p>The training covers key areas including:</p>
                             <div class="modules-grid">
                                 <a class="module-card" href="intro.html" onclick="showPage('intro',null)"><h3>Introduction to Digital Literacy</h3><p>Devices, smartphones, internet basics</p></a>
-                                <a class="module-card" href="safety.html" onclick="showPage('safety',null)"><h3>Online Safety & Cyber Hygiene</h3><p>Passwords, scams, privacy protection</p></a>
+                                <a class="module-card" href="safety.html" onclick="showPage('safety',null)"><h3>Online Safety &amp; Cyber Hygiene</h3><p>Passwords, scams, privacy protection</p></a>
                                 <a class="module-card" href="communication.html" onclick="showPage('communication',null)"><h3>Digital Communication</h3><p>Email, messaging, collaboration tools</p></a>
-                                <a class="module-card" href="inform.html" onclick="showPage('inform',null)"><h3>Information & Media Literacy</h3><p>Fact-checking, misinformation awareness</p></a>
+                                <a class="module-card" href="inform.html" onclick="showPage('inform',null)"><h3>Information &amp; Media Literacy</h3><p>Fact-checking, misinformation awareness</p></a>
                                 <a class="module-card" href="financial.html" onclick="showPage('financial',null)"><h3>Digital Financial Literacy</h3><p>Mobile money, digital banking, safety</p></a>
-                                <a class="module-card" href="productivity.html" onclick="showPage('productivity',null)"><h3>Productivity & Work Readiness</h3><p>Office tools, job applications, CVs</p></a>
+                                <a class="module-card" href="productivity.html" onclick="showPage('productivity',null)"><h3>Productivity &amp; Work Readiness</h3><p>Office tools, job applications, CVs</p></a>
                                 <a class="module-card" href="entrepreneurship.html" onclick="showPage('entrepreneurship',null)"><h3>Digital Entrepreneurship</h3><p>Online business, e-commerce, marketing</p></a>
                                 <a class="module-card" href="citizenship.html" onclick="showPage('citizenship',null)"><h3>Responsible Digital Citizenship</h3><p>Ethics, rights, inclusive participation</p></a>
                             </div>
                             <p>Special attention is given to promoting digital inclusion for women, youth, persons with disabilities, rural communities, and other underserved groups. The program encourages equitable participation and seeks to ensure that everyone can benefit from the opportunities offered by digital technologies.</p><br>
                             <p>By the end of this training, participants will be better equipped to use digital tools confidently, protect themselves online, access information and services, enhance their livelihoods, and contribute positively to Zambia's growing digital economy.</p><br>
                             <p>We here at Zambian Cyber Security Initiative Foundation believe that together, we can build digital bridges that connect individuals, communities, and opportunities for a more inclusive and prosperous future.</p><br>
-                            </div>
-                        </div>
+                            
+                        
                 </section>
             </div>
-            </div>
-        <footer>
-            <p>&copy; 2026 Zambian Cyber Security Initiative Foundation</p>
-        </footer>
         </div>
-        <script>
-  const pageTitles = {
+    </div>
+    <footer>
+        <p>&copy; 2026 Zambian Cyber Security Initiative Foundation</p>
+    </footer>
+    <script>
+const pageTitles = {
     home: 'Digital Bridges: Inclusive Digital Literacy Training for Communities in Zambia',
     intro: 'Introduction to Digital Literacy',
     safety: 'Online Safety and Cyber Hygiene',
@@ -113,6 +120,40 @@
     document.querySelector('.main-area').scrollTo({ top: 0, behavior: 'smooth' });
     return false;
   }
-</script>       
-    </body>
+
+  // ---- Responsive navigation: hamburger dropdown (mobile) / sidebar (desktop) ----
+  function toggleMenu() {
+    const sidebar = document.getElementById('sidebar');
+    const toggle = document.getElementById('menuToggle');
+    const overlay = document.getElementById('menuOverlay');
+    const isOpen = sidebar.classList.toggle('open');
+    overlay.classList.toggle('visible', isOpen);
+    toggle.classList.toggle('active', isOpen);
+    toggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+    document.body.classList.toggle('menu-open', isOpen);
+  }
+
+  function closeMenu() {
+    const sidebar = document.getElementById('sidebar');
+    const toggle = document.getElementById('menuToggle');
+    const overlay = document.getElementById('menuOverlay');
+    sidebar.classList.remove('open');
+    overlay.classList.remove('visible');
+    toggle.classList.remove('active');
+    toggle.setAttribute('aria-expanded', 'false');
+    document.body.classList.remove('menu-open');
+  }
+
+  // Close the mobile menu automatically if the window is resized back to desktop width
+  window.addEventListener('resize', function () {
+    if (window.innerWidth > 768) closeMenu();
+  });
+
+  // Close the mobile menu when the Escape key is pressed
+  document.addEventListener('keydown', function (e) {
+    if (e.key === 'Escape') closeMenu();
+  });
+
+    </script>
+</body>
 </html>

@@ -5,35 +5,42 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Digital Bridges: Introduction to Digital Literacy</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=home" />
 </head>
 <body>
     <header>
-            <div class="kente-bar"></div>
-            <div class="main-area">
-                <div class="topbar">
-                <h1 id="page-title"><img src="zcsif_logo.png" width="75" height="75"> Zambian Cyber Security Initiative Foundation</h1>
-                </div>
-            <div class="shell">
-                <nav>
-                    <ul>
-                        <li><a href="index.html" onclick="showPage('home',this)" class="active"><span class="material-symbols-outlined"></span>Home</a></li>
-                        <li><a href="intro.html" onclick="showPage('intro',this)">Intro to Digital Literacy</a></li>
-                        <li><a href="safety.html" onclick="showPage('safety',this)">Online Safety</a></li>
-                        <li><a href="communication.html" onclick="showPage('communication',this)">Digital Communication</a></li>
-                        <li><a href="inform.html" onclick="showPage('inform',this)">Information Literacy</a></li>
-                        <li><a href="financial.html" onclick="showPage('financial',this)">Financial Literacy</a></li>
-                        <li><a href="productivity.html" onclick="showPage('productivity',this)">Productivity</a></li>
-                        <li><a href="entrepreneurship.html" onclick="showPage('entrepreneurship',this)">Entrepreneurship</a></li>
-                        <li><a href="citizenship.html" onclick="showPage('citizenship',this)">Digital Citizenship</a></li>
-                    </ul>
-                </nav>
-            <!--<h1>Digital Bridges: Inclusive Digital Literacy Training for Communities in Zambia</h1>-->
-        </header>
-    <section class="welcome-card">
+        <div class="kente-bar"></div>
+        <div class="topbar">
+            <button class="menu-toggle" id="menuToggle" type="button" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="sidebar" onclick="toggleMenu()">
+                <span></span><span></span><span></span>
+            </button>
+            <h1 id="page-title"><img src="zcsif_logo.png" width="75" height="75" alt="ZCSIF logo"> Zambian Cyber Security Initiative Foundation</h1>
+        </div>
+    </header>
+    <div class="shell">
+        <div class="menu-overlay" id="menuOverlay" onclick="closeMenu()"></div>
+        <aside class="sidebar" id="sidebar">
+            <nav>
+                <ul>
+                        <li><a href="index.html" onclick="showPage('home',this); closeMenu();"><span class="material-symbols-outlined">home</span>Home</a></li>
+                        <li><a href="intro.html" onclick="showPage('intro',this); closeMenu();" class="active">Intro to Digital Literacy</a></li>
+                        <li><a href="safety.html" onclick="showPage('safety',this); closeMenu();">Online Safety</a></li>
+                        <li><a href="communication.html" onclick="showPage('communication',this); closeMenu();">Digital Communication</a></li>
+                        <li><a href="inform.html" onclick="showPage('inform',this); closeMenu();">Information Literacy</a></li>
+                        <li><a href="financial.html" onclick="showPage('financial',this); closeMenu();">Financial Literacy</a></li>
+                        <li><a href="productivity.html" onclick="showPage('productivity',this); closeMenu();">Productivity</a></li>
+                        <li><a href="entrepreneurship.html" onclick="showPage('entrepreneurship',this); closeMenu();">Entrepreneurship</a></li>
+                        <li><a href="citizenship.html" onclick="showPage('citizenship',this); closeMenu();">Digital Citizenship</a></li>
+                </ul>
+            </nav>
+        </aside>
+        <div class="main-area">
+            <div class="page-body">
+        <section class="welcome-card">
         <h2 style="margin-top:0">Introduction to Digital Literacy</h2>
         <h3>Module Overview</h3>
             <p>Digital literacy is the ability to use digital technologies such as smartphones, computers, and the internet to access information, communicate, solve problems, and participate effectively in society. This module introduces learners to basic digital concepts and builds confidence in using digital tools safely and effectively.
-        <h4>Learning Objectives</h4>
+        </p><h4>Learning Objectives</h4>
         <p>By the end of this module, participants will be able to:</p>
         <ul>
             <li>Define digital literacy and explain its importance.</li>
@@ -43,7 +50,7 @@
             <li>Use digital communication tools responsibly.</li>
         </ul>
     </section>
-    <section class="welcome-card">
+        <section class="welcome-card">
         <h2>Understanding Digital Devices</h2>
             <h4>Learning Outcomes</h4>
             <p>Participants will be able to:</p>
@@ -56,7 +63,7 @@
             <p>A digital device is an electronic tool that helps people create, store, process, and share information.</p>
             <h4>Common Digital Devices</h4>
                 <table>
-                    <tr>
+                    <tbody><tr>
                         <th>Device</th>
                         <th>Purpose</th>
                     </tr>
@@ -80,7 +87,7 @@
                         <td>Smart TV</td>
                         <td>Accessing digital content and information</td>
                     </tr>
-                </table>
+                </tbody></table>
             <h4>How Digital Devices Help Communities</h4>
             <p>Digital devices can be used for:</p>
                 <ul>
@@ -102,7 +109,7 @@
                     <li>What challenges do you face when using digital devices?</li>
                 </ul>
     </section>
-    <section class="welcome-card">
+        <section class="welcome-card">
         <h2>Smartphone and Computer Basics</h2>
         <h4>Learning Outcomes</h4>
             <p>Participants will be able to:</p>
@@ -172,7 +179,7 @@
                 <h5>Key Message</h5> 
                 <p>Digital skills improve with practice. Mistakes are part of learning.</p>
     </section>
-    <section class="welcome-card">
+        <section class="welcome-card">
         <h2>Internet Navigation</h2>
         <h4>Learning Outcomes</h4>
             <p>Participants will be able to:</p>
@@ -243,7 +250,7 @@
                 <li>Local health services for Zambian residents</li>
             </ul>
     </section>
-    <section class="welcome-card">
+        <section class="welcome-card">
         <h2>Introduction to Digital Communication</h2>
         <h4>Learning Outcomes</h4>
             <p>Participants will be able to:</p>
@@ -264,7 +271,7 @@
             </ul>
             <h5>Common Digital Communication Tools</h5>
                 <table>
-                    <tr>
+                    <tbody><tr>
                         <th>Tool</th>
                         <th>Purpose</th>
                     </tr>	
@@ -288,7 +295,7 @@
                         <td>Zoom/Google Meet</td>
                         <td>Online meetings and training</td>
                     </tr>	
-                </table>
+                </tbody></table>
             <h5>Creating and Managing an Email Account</h5>
             <p>Participants learn how to:</p>
                 <ul>
@@ -306,17 +313,17 @@
             <h5>Digital Etiquette</h5>
             <p>Do:</p>
                 <ul>
-                    <li>&#x2713; Be polite</li>
-                    <li>&#x2713; Respect others' opinions</li>
-                    <li>&#x2713; Verify information before sharing</li>
-                    <li>&#x2713; Respond professionally</li>
+                    <li>✓ Be polite</li>
+                    <li>✓ Respect others' opinions</li>
+                    <li>✓ Verify information before sharing</li>
+                    <li>✓ Respond professionally</li>
                 </ul>
             <p>Avoid:</p>
                 <ul>
-                    <li>&#10006; Cyberbullying</li>
-                    <li>&#10006; Sharing offensive content</li>
-                    <li>&#10006; Spreading rumors</li>
-                    <li>&#10006; Sharing confidential information</li>
+                    <li>✖ Cyberbullying</li>
+                    <li>✖ Sharing offensive content</li>
+                    <li>✖ Spreading rumors</li>
+                    <li>✖ Sharing confidential information</li>
                 </ul>
             <h4>Practical Activities: Communicating Digitally</h4>
                 <h5>Email Exercise</h5>
@@ -338,12 +345,15 @@
                     <li>What warning signs can be identified?</li>
                     <li>What action should be taken?</li>
                 </ul>
-    </section>    
+    </section>
+            </div>
+        </div>
+    </div>
     <footer>
         <p>&copy; 2026 Zambian Cyber Security Initiative Foundation</p>
     </footer>
     <script>
-  const pageTitles = {
+const pageTitles = {
     home: 'Digital Bridges: Inclusive Digital Literacy Training for Communities in Zambia',
     intro: 'Introduction to Digital Literacy',
     safety: 'Online Safety and Cyber Hygiene',
@@ -396,6 +406,40 @@
     document.querySelector('.main-area').scrollTo({ top: 0, behavior: 'smooth' });
     return false;
   }
-</script>
+
+  // ---- Responsive navigation: hamburger dropdown (mobile) / sidebar (desktop) ----
+  function toggleMenu() {
+    const sidebar = document.getElementById('sidebar');
+    const toggle = document.getElementById('menuToggle');
+    const overlay = document.getElementById('menuOverlay');
+    const isOpen = sidebar.classList.toggle('open');
+    overlay.classList.toggle('visible', isOpen);
+    toggle.classList.toggle('active', isOpen);
+    toggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+    document.body.classList.toggle('menu-open', isOpen);
+  }
+
+  function closeMenu() {
+    const sidebar = document.getElementById('sidebar');
+    const toggle = document.getElementById('menuToggle');
+    const overlay = document.getElementById('menuOverlay');
+    sidebar.classList.remove('open');
+    overlay.classList.remove('visible');
+    toggle.classList.remove('active');
+    toggle.setAttribute('aria-expanded', 'false');
+    document.body.classList.remove('menu-open');
+  }
+
+  // Close the mobile menu automatically if the window is resized back to desktop width
+  window.addEventListener('resize', function () {
+    if (window.innerWidth > 768) closeMenu();
+  });
+
+  // Close the mobile menu when the Escape key is pressed
+  document.addEventListener('keydown', function (e) {
+    if (e.key === 'Escape') closeMenu();
+  });
+
+    </script>
 </body>
 </html>

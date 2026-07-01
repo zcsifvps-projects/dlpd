@@ -5,31 +5,38 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Digital Bridges: Online Safety and Cyber Hygiene</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=home" />
 </head>
 <body>
     <header>
-            <div class="kente-bar"></div>
-            <div class="main-area">
-                <div class="topbar">
-                <h1 id="page-title"><img src="zcsif_logo.png" width="75" height="75"> Zambian Cyber Security Initiative Foundation</h1>
-                </div>
-            <div class="shell">
-                <nav>
-                    <ul>
-                        <li><a href="index.html" onclick="showPage('home',this)"><span class="material-symbols-outlined">home</span>Home</a></li>
-                        <li><a href="intro.html" onclick="showPage('intro',this)">Intro to Digital Literacy</a></li>
-                        <li><a href="safety.html" onclick="showPage('safety',this)">Online Safety</a></li>
-                        <li><a href="communication.html" onclick="showPage('communication',this)">Digital Communication</a></li>
-                        <li><a href="inform.html" onclick="showPage('inform',this)">Information Literacy</a></li>
-                        <li><a href="financial.html" onclick="showPage('financial',this)">Financial Literacy</a></li>
-                        <li><a href="productivity.html" onclick="showPage('productivity',this)" class="active">Productivity</a></li>
-                        <li><a href="entrepreneurship.html" onclick="showPage('entrepreneurship',this)">Entrepreneurship</a></li>
-                        <li><a href="citizenship.html" onclick="showPage('citizenship',this)">Digital Citizenship</a></li>
-                    </ul>
-                </nav>
-            <!--<h1>Digital Bridges: Inclusive Digital Literacy Training for Communities in Zambia</h1>-->
-        </header>
-    <section class="welcome-card">
+        <div class="kente-bar"></div>
+        <div class="topbar">
+            <button class="menu-toggle" id="menuToggle" type="button" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="sidebar" onclick="toggleMenu()">
+                <span></span><span></span><span></span>
+            </button>
+            <h1 id="page-title"><img src="zcsif_logo.png" width="75" height="75" alt="ZCSIF logo"> Zambian Cyber Security Initiative Foundation</h1>
+        </div>
+    </header>
+    <div class="shell">
+        <div class="menu-overlay" id="menuOverlay" onclick="closeMenu()"></div>
+        <aside class="sidebar" id="sidebar">
+            <nav>
+                <ul>
+                        <li><a href="index.html" onclick="showPage('home',this); closeMenu();"><span class="material-symbols-outlined">home</span>Home</a></li>
+                        <li><a href="intro.html" onclick="showPage('intro',this); closeMenu();">Intro to Digital Literacy</a></li>
+                        <li><a href="safety.html" onclick="showPage('safety',this); closeMenu();" class="active">Online Safety</a></li>
+                        <li><a href="communication.html" onclick="showPage('communication',this); closeMenu();">Digital Communication</a></li>
+                        <li><a href="inform.html" onclick="showPage('inform',this); closeMenu();">Information Literacy</a></li>
+                        <li><a href="financial.html" onclick="showPage('financial',this); closeMenu();">Financial Literacy</a></li>
+                        <li><a href="productivity.html" onclick="showPage('productivity',this); closeMenu();">Productivity</a></li>
+                        <li><a href="entrepreneurship.html" onclick="showPage('entrepreneurship',this); closeMenu();">Entrepreneurship</a></li>
+                        <li><a href="citizenship.html" onclick="showPage('citizenship',this); closeMenu();">Digital Citizenship</a></li>
+                </ul>
+            </nav>
+        </aside>
+        <div class="main-area">
+            <div class="page-body">
+        <section class="welcome-card">
             <h2 style="margin-top:0">Online Safety and Cyber Hygiene</h2>
             <p><strong>Module Objective:</strong> To enable participants to protect themselves, their personal information, and their digital devices from online threats by practicing safe and responsible digital behavior.</p>
           <h4>Learning Outcomes</h4>
@@ -42,7 +49,7 @@
               <li>Apply safe online practices when using digital devices and internet services.</li>
             </ul>
     </section>
-    <section class="welcome-card">
+        <section class="welcome-card">
         <h2>Password Management</h2>
             <h3>What is a Password?</h3>
                 <p>A password is a secret combination of letters, numbers, and symbols used to protect access to digital accounts and devices. Passwords help prevent unauthorized individuals from accessing personal information, financial accounts, emails, and social media profiles.</p>
@@ -73,44 +80,44 @@
                         </thead>
                         <tbody>
                         <tr>
-                            <td>&#10006; 123456</td>
-                            <td>&#x2713; M@ngoTree!2026</td>
+                            <td>✖ 123456</td>
+                            <td>✓ M@ngoTree!2026</td>
                         </tr>
                         <tr>
-                            <td>&#10006; password</td>
-                            <td>&#x2713; MyVillage#Safe24</td>
+                            <td>✖ password</td>
+                            <td>✓ MyVillage#Safe24</td>
                         </tr>
                         <tr>
-                            <td>&#10006; Zambia123</td>
-                            <td>&#x2713; Luangwa$River88</td>
+                            <td>✖ Zambia123</td>
+                            <td>✓ Luangwa$River88</td>
                         </tr>
                         <tr>
-                            <td>&#10006; qwerty</td>
-                            <td>&#x2713; Baobab@2026Grow</td>
+                            <td>✖ qwerty</td>
+                            <td>✓ Baobab@2026Grow</td>
                         </tr>
                         </tbody>
                     </table>
             <h3>Password Best Practices</h3>
                 <h4>Do</h4>
                     <ul>
-                        <li>&#x2713; Use different passwords for different accounts</li>
-                        <li>&#x2713; Change passwords if you suspect compromise</li>
-                        <li>&#x2713; Enable two-factor authentication (2FA) when available</li>
-                        <li>&#x2713; Store passwords securely</li>
+                        <li>✓ Use different passwords for different accounts</li>
+                        <li>✓ Change passwords if you suspect compromise</li>
+                        <li>✓ Enable two-factor authentication (2FA) when available</li>
+                        <li>✓ Store passwords securely</li>
                     </ul>
                 <h4>Don't</h4>
                     <ul>
-                        <li>&#10006; Share passwords with others</li>
-                        <li>&#10006; Write passwords in public places</li>
-                        <li>&#10006; Use personal information such as birthdays or names</li>
-                        <li>&#10006; Reuse the same password everywhere</li>
+                        <li>✖ Share passwords with others</li>
+                        <li>✖ Write passwords in public places</li>
+                        <li>✖ Use personal information such as birthdays or names</li>
+                        <li>✖ Reuse the same password everywhere</li>
                     </ul>
                 <h4>Practical Exercise</h4>
                     <p>Create a strong password using this formula:</p>
                     <p><strong>Favourite object + Symbol + Number + Memorable phrase</strong></p>
                     <p>Example: <code>Baobab@2026Grow</code></p>
     </section>
-    <section class="welcome-card">
+        <section class="welcome-card">
         <h2>Scam and Phishing Awareness</h2>
             <h3>What is an Online Scam?</h3>
                 <p>An online scam is an attempt by criminals to trick people into giving away money, personal information, or access to accounts.</p>
@@ -170,7 +177,7 @@
                 <p><strong>"URGENT: Your account will be suspended in 2 hours. Click here to verify: bit.ly/acct-verify99"</strong></p>
                 <p><strong>Answer:</strong>Fraudulent — creates urgency and uses a suspicious shortened link.</p>
     </section>
-    <section class="welcome-card">
+        <section class="welcome-card">
         <h2>Social Media Safety</h2>
             <h3>Understanding Social Media Risks</h3>
                 <p>Social media platforms allow people to connect and share information, but they can also expose users to risks including identity theft, online harassment, scams, misinformation, and privacy breaches.</p>
@@ -205,7 +212,7 @@
                  <h4>Practical Exercise</h4>
                     <p>Review privacy settings on your social media accounts and make appropriate adjustments. Check who can view your profile, see your posts, and contact you.</p>
     </section>
-    <section class="welcome-card">
+        <section class="welcome-card">
         <h2>Privacy and Data Protection</h2>
             <h3>What is Personal Information?</h3>
             <p>Personal information is any information that can identify an individual. Examples include full name, phone number, address, national ID number, bank account details, and photographs.</p>
@@ -246,27 +253,27 @@
                     <tbody>
                         <tr>
                             <td>First name only</td>
-                            <td>&#x2713; Generally safe</td>
+                            <td>✓ Generally safe</td>
                         </tr>
                         <tr>
                             <td>Full name + phone number</td>
-                            <td>&#9785; Share with caution</td>
+                            <td>☹ Share with caution</td>
                         </tr>
                         <tr>
                             <td>National ID number</td>
-                            <td>&#x1F50F; Keep private</td>
+                            <td>🔏 Keep private</td>
                         </tr>
                         <tr>
                             <td>Bank account details</td>
-                            <td>&#x1F50F;Keep private</td>
+                            <td>🔏Keep private</td>
                         </tr>
                         <tr>
                             <td>Home address</td>
-                            <td>&#x1F50F; Keep private</td>
+                            <td>🔏 Keep private</td>
                         </tr>
                         <tr>
                             <td>Workplace / school name</td>
-                            <td>&#9785; Share with caution</td>
+                            <td>☹ Share with caution</td>
                         </tr>
                     </tbody>
                 </table>
@@ -292,7 +299,7 @@
             </div>
             </div>
     </section>
-    <section class="welcome-card">
+        <section class="welcome-card">
         <h2>Safe Online Behavior</h2>
             <h3>What is Cyber Hygiene?</h3>
                 <p>Cyber hygiene refers to routine practices that help maintain digital security and reduce online risks. Just as personal hygiene protects health, cyber hygiene protects digital safety.</p>
@@ -339,7 +346,7 @@
                     <li>Respect intellectual property and copyright</li>
                     <li>Use technology ethically</li>
                 </ul>
-            <section class="activity-box" class="welcome-card">
+            <section class="activity-box">
             <h4>Practical Exercise</h4>
                 <p>Build your personal cyber safety checklist by ticking the habits you commit to practicing:</p>
                 <section class="checklist" id="cyber-checklist">
@@ -371,11 +378,11 @@
                 <h2>Module Assessment</h2>
                     <p>Participants should be able to:</p>
                     <ul>
-                        <li>&#x2713; Create a strong password</li>
-                        <li>&#x2713; Identify signs of phishing and scams</li>
-                        <li>&#x2713; Adjust social media privacy settings</li>
-                        <li>&#x2713; Recognize personal information that should be protected</li>
-                        <li>&#x2713; Demonstrate safe online practices</li>
+                        <li>✓ Create a strong password</li>
+                        <li>✓ Identify signs of phishing and scams</li>
+                        <li>✓ Adjust social media privacy settings</li>
+                        <li>✓ Recognize personal information that should be protected</li>
+                        <li>✓ Demonstrate safe online practices</li>
                     </ul>
                     <h3>Reflection Questions</h3>
                     <ol>
@@ -386,12 +393,15 @@
                         <li>Which cyber hygiene practices will you begin using immediately?</li>
                     </ol>
             </section> 
-    </section>        
+    </section>
+            </div>
+        </div>
+    </div>
     <footer>
         <p>&copy; 2026 Zambian Cyber Security Initiative Foundation</p>
     </footer>
     <script>
-  const pageTitles = {
+const pageTitles = {
     home: 'Digital Bridges: Inclusive Digital Literacy Training for Communities in Zambia',
     intro: 'Introduction to Digital Literacy',
     safety: 'Online Safety and Cyber Hygiene',
@@ -444,6 +454,40 @@
     document.querySelector('.main-area').scrollTo({ top: 0, behavior: 'smooth' });
     return false;
   }
-</script>
+
+  // ---- Responsive navigation: hamburger dropdown (mobile) / sidebar (desktop) ----
+  function toggleMenu() {
+    const sidebar = document.getElementById('sidebar');
+    const toggle = document.getElementById('menuToggle');
+    const overlay = document.getElementById('menuOverlay');
+    const isOpen = sidebar.classList.toggle('open');
+    overlay.classList.toggle('visible', isOpen);
+    toggle.classList.toggle('active', isOpen);
+    toggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+    document.body.classList.toggle('menu-open', isOpen);
+  }
+
+  function closeMenu() {
+    const sidebar = document.getElementById('sidebar');
+    const toggle = document.getElementById('menuToggle');
+    const overlay = document.getElementById('menuOverlay');
+    sidebar.classList.remove('open');
+    overlay.classList.remove('visible');
+    toggle.classList.remove('active');
+    toggle.setAttribute('aria-expanded', 'false');
+    document.body.classList.remove('menu-open');
+  }
+
+  // Close the mobile menu automatically if the window is resized back to desktop width
+  window.addEventListener('resize', function () {
+    if (window.innerWidth > 768) closeMenu();
+  });
+
+  // Close the mobile menu when the Escape key is pressed
+  document.addEventListener('keydown', function (e) {
+    if (e.key === 'Escape') closeMenu();
+  });
+
+    </script>
 </body>
 </html>

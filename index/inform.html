@@ -5,30 +5,38 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Digital Bridges: Information and Media Literacy</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=home" />
 </head>
 <body>
     <header>
-            <div class="kente-bar"></div>
-            <div class="main-area">
-                <div class="topbar">
-                <h1 id="page-title"><img src="zcsif_logo.png" width="75" height="75"> Zambian Cyber Security Initiative Foundation</h1>
-                </div>
-            <div class="shell">
-                <nav>
-                    <ul>
-                        <li><a href="index.html" onclick="showPage('home',this)"><span class="material-symbols-outlined"></span>Home</a></li>
-                        <li><a href="intro.html" onclick="showPage('intro',this)">Intro to Digital Literacy</a></li>
-                        <li><a href="safety.html" onclick="showPage('safety',this)">Online Safety</a></li>
-                        <li><a href="communication.html" onclick="showPage('communication',this)">Digital Communication</a></li>
-                        <li><a href="inform.html" onclick="showPage('inform',this)" class="active">Information Literacy</a></li>
-                        <li><a href="financial.html" onclick="showPage('financial',this)">Financial Literacy</a></li>
-                        <li><a href="productivity.html" onclick="showPage('productivity',this)">Productivity</a></li>
-                        <li><a href="entrepreneurship.html" onclick="showPage('entrepreneurship',this)">Entrepreneurship</a></li>
-                        <li><a href="citizenship.html" onclick="showPage('citizenship',this)">Digital Citizenship</a></li>
-                    </ul>
-                </nav>
-        </header>
-            <section class="welcome-card">
+        <div class="kente-bar"></div>
+        <div class="topbar">
+            <button class="menu-toggle" id="menuToggle" type="button" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="sidebar" onclick="toggleMenu()">
+                <span></span><span></span><span></span>
+            </button>
+            <h1 id="page-title"><img src="zcsif_logo.png" width="75" height="75" alt="ZCSIF logo"> Zambian Cyber Security Initiative Foundation</h1>
+        </div>
+    </header>
+    <div class="shell">
+        <div class="menu-overlay" id="menuOverlay" onclick="closeMenu()"></div>
+        <aside class="sidebar" id="sidebar">
+            <nav>
+                <ul>
+                        <li><a href="index.html" onclick="showPage('home',this); closeMenu();"><span class="material-symbols-outlined">home</span>Home</a></li>
+                        <li><a href="intro.html" onclick="showPage('intro',this); closeMenu();">Intro to Digital Literacy</a></li>
+                        <li><a href="safety.html" onclick="showPage('safety',this); closeMenu();">Online Safety</a></li>
+                        <li><a href="communication.html" onclick="showPage('communication',this); closeMenu();">Digital Communication</a></li>
+                        <li><a href="inform.html" onclick="showPage('inform',this); closeMenu();" class="active">Information Literacy</a></li>
+                        <li><a href="financial.html" onclick="showPage('financial',this); closeMenu();">Financial Literacy</a></li>
+                        <li><a href="productivity.html" onclick="showPage('productivity',this); closeMenu();">Productivity</a></li>
+                        <li><a href="entrepreneurship.html" onclick="showPage('entrepreneurship',this); closeMenu();">Entrepreneurship</a></li>
+                        <li><a href="citizenship.html" onclick="showPage('citizenship',this); closeMenu();">Digital Citizenship</a></li>
+                </ul>
+            </nav>
+        </aside>
+        <div class="main-area">
+            <div class="page-body">
+        <section class="welcome-card">
                 <h2 style="margin-top:0">Information and Media Literacy</h2>
                 <p>In today's digital world, information is available at our fingertips through websites, social media platforms, messaging applications, blogs, videos, and online news sources. While access to information offers many benefits, it also presents challenges. Not all information found online is accurate, reliable, or trustworthy. False information, misleading content, and fake news can spread quickly, influencing opinions, creating confusion, and sometimes causing harm.</p>
                 <p>Information and media literacy is the ability to find, evaluate, understand, and responsibly use information from digital sources. It helps individuals make informed decisions, identify trustworthy information, and avoid spreading misinformation.</p>
@@ -44,7 +52,7 @@
                             <li>Use critical thinking skills when consuming online information.</li>
                         </ul>
                 </section>
-            <section class="welcome-card">
+        <section class="welcome-card">
                 <h2>Identifying Misinformation and Fake News</h2>
                 <div class="term-cards">
                     <div class="term-card">
@@ -84,7 +92,7 @@
                     <p class="checklist-score" id="warning-checklist-score">0 / 5 questions considered</p>
                 </div>
             </section>
-            <section class="welcome-card">
+        <section class="welcome-card">
                 <h2>Fact Checking Basics</h2>
                     <p>Fact-checking is the process of verifying whether information is accurate before accepting it as true or sharing it with others.</p>
                     <h3>Steps for Fact-Checking</h3>
@@ -129,7 +137,7 @@
                     <span>STOP</span><span class="rule-arrow">→</span><span>CHECK</span><span class="rule-arrow">→</span><span>VERIFY</span><span class="rule-arrow">→</span><span>SHARE</span>
                 </div>
             </section>
-            <section class="welcome-card">
+        <section class="welcome-card">
                 <h2>Responsible Content Sharing</h2>
                     <p>Every internet user plays a role in preventing the spread of false information.</p>
                     <h3>Sharing Inaccurate Information Can:</h3>
@@ -149,7 +157,7 @@
                             <div class="practice-item"><div><strong>Give Credit to Original Sources</strong><p>Respect intellectual property and acknowledge creators when using their content.</p></div></div>
                         </div>
             </section>
-            <section class="welcome-card">
+        <section class="welcome-card">
                 <h2>Critical Digital Thinking</h2>
                     <p>Critical thinking is the ability to analyze information objectively and make reasoned judgments. In digital spaces, critical thinking helps individuals avoid manipulation and make informed decisions.</p>
                     <h3>Key Critical Thinking Questions</h3>
@@ -179,7 +187,7 @@
                         <li>Seek evidence before accepting claims</li>
                     </ul>
             </section>
-            <section class="welcome-card">
+        <section class="welcome-card">
                 <h2>Practical Activity</h2>
                 <h3>Information Detective Exercise</h3>
                 <div class="activity-box">
@@ -195,7 +203,7 @@
                     <p>Groups present their findings and discuss their decisions.</p>
                 </div>
             </section>
-            <section class="welcome-card">
+        <section class="welcome-card">
                 <h2>Key Takeaways</h2>
                     <div class="takeaways-grid">
                         <div class="takeaway-card"><p>Not everything online is accurate or trustworthy.</p></div>
@@ -209,13 +217,14 @@
                     <span>Think Before You Click</span><span class="rule-arrow">·</span><span>Check Before You Share</span>
                 </div>
             </section>
-        </div>        
+            </div>
+        </div>
+    </div>
     <footer>
         <p>&copy; 2026 Zambian Cyber Security Initiative Foundation</p>
     </footer>
-    </div>
     <script>
-  const pageTitles = {
+const pageTitles = {
     home: 'Digital Bridges: Inclusive Digital Literacy Training for Communities in Zambia',
     intro: 'Introduction to Digital Literacy',
     safety: 'Online Safety and Cyber Hygiene',
@@ -268,6 +277,40 @@
     document.querySelector('.main-area').scrollTo({ top: 0, behavior: 'smooth' });
     return false;
   }
-</script>
+
+  // ---- Responsive navigation: hamburger dropdown (mobile) / sidebar (desktop) ----
+  function toggleMenu() {
+    const sidebar = document.getElementById('sidebar');
+    const toggle = document.getElementById('menuToggle');
+    const overlay = document.getElementById('menuOverlay');
+    const isOpen = sidebar.classList.toggle('open');
+    overlay.classList.toggle('visible', isOpen);
+    toggle.classList.toggle('active', isOpen);
+    toggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+    document.body.classList.toggle('menu-open', isOpen);
+  }
+
+  function closeMenu() {
+    const sidebar = document.getElementById('sidebar');
+    const toggle = document.getElementById('menuToggle');
+    const overlay = document.getElementById('menuOverlay');
+    sidebar.classList.remove('open');
+    overlay.classList.remove('visible');
+    toggle.classList.remove('active');
+    toggle.setAttribute('aria-expanded', 'false');
+    document.body.classList.remove('menu-open');
+  }
+
+  // Close the mobile menu automatically if the window is resized back to desktop width
+  window.addEventListener('resize', function () {
+    if (window.innerWidth > 768) closeMenu();
+  });
+
+  // Close the mobile menu when the Escape key is pressed
+  document.addEventListener('keydown', function (e) {
+    if (e.key === 'Escape') closeMenu();
+  });
+
+    </script>
 </body>
 </html>
