@@ -157,19 +157,7 @@
         <p>&copy; 2026 Zambian Cyber Security Initiative Foundation</p>
     </footer>
     <script>
-const pageTitles = {
-    home: 'Digital Bridges: Inclusive Digital Literacy Training for Communities in Zambia',
-    intro: 'Introduction to Digital Literacy',
-    safety: 'Online Safety and Cyber Hygiene',
-    communication: 'Digital Communication and Collaboration',
-    inform: 'Information and Media Literacy',
-    financial: 'Digital Financial Literacy',
-    productivity: 'Productivity and Work Readiness',
-    entrepreneurship: 'Digital Entrepreneurship',
-    citizenship: 'Responsible Digital Citizenship',
-  };
-
-  // Scam card reveal
+// Scam card reveal
   function toggleScam(card) {
     card.classList.toggle('revealed');
   }
@@ -195,23 +183,7 @@ const pageTitles = {
     document.getElementById(scoreId).textContent = checked + ' / ' + boxes.length + ' ' + label;
   });
 
-  function showPage(id, linkEl) {
-    document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
-    document.getElementById('page-' + id).classList.add('active');
-    document.getElementById('page-title').textContent = pageTitles[id];
-    document.querySelectorAll('.sidebar nav a').forEach(a => a.classList.remove('active'));
-    // If called from a module card (linkEl=null), find the matching sidebar link
-    if (linkEl) {
-      linkEl.classList.add('active');
-    } else {
-      const match = document.querySelector(`.sidebar nav a[onclick*="'${id}'"]`);
-      if (match) match.classList.add('active');
-    }
-    document.querySelector('.main-area').scrollTo({ top: 0, behavior: 'smooth' });
-    return false;
-  }
-
-  // ---- Responsive navigation: hamburger dropdown (mobile) / sidebar (desktop) ----
+// ---- Responsive navigation: hamburger dropdown (mobile) / sidebar (desktop) ----
   function toggleMenu() {
     const sidebar = document.getElementById('sidebar');
     const toggle = document.getElementById('menuToggle');

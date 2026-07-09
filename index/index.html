@@ -45,14 +45,14 @@
                             </div>
                             <p>The training covers key areas including:</p>
                             <div class="modules-grid">
-                                <a class="module-card" href="intro.html" onclick="showPage('intro',null)"><h3>Introduction to Digital Literacy</h3><p>Devices, smartphones, internet basics</p></a>
-                                <a class="module-card" href="safety.html" onclick="showPage('safety',null)"><h3>Online Safety &amp; Cyber Hygiene</h3><p>Passwords, scams, privacy protection</p></a>
-                                <a class="module-card" href="communication.html" onclick="showPage('communication',null)"><h3>Digital Communication</h3><p>Email, messaging, collaboration tools</p></a>
-                                <a class="module-card" href="inform.html" onclick="showPage('inform',null)"><h3>Information &amp; Media Literacy</h3><p>Fact-checking, misinformation awareness</p></a>
-                                <a class="module-card" href="financial.html" onclick="showPage('financial',null)"><h3>Digital Financial Literacy</h3><p>Mobile money, digital banking, safety</p></a>
-                                <a class="module-card" href="productivity.html" onclick="showPage('productivity',null)"><h3>Productivity &amp; Work Readiness</h3><p>Office tools, job applications, CVs</p></a>
-                                <a class="module-card" href="entrepreneurship.html" onclick="showPage('entrepreneurship',null)"><h3>Digital Entrepreneurship</h3><p>Online business, e-commerce, marketing</p></a>
-                                <a class="module-card" href="citizenship.html" onclick="showPage('citizenship',null)"><h3>Responsible Digital Citizenship</h3><p>Ethics, rights, inclusive participation</p></a>
+                                <a class="module-card" href="intro.html"><h3>Introduction to Digital Literacy</h3><p>Devices, smartphones, internet basics</p></a>
+                                <a class="module-card" href="safety.html"><h3>Online Safety &amp; Cyber Hygiene</h3><p>Passwords, scams, privacy protection</p></a>
+                                <a class="module-card" href="communication.html"><h3>Digital Communication</h3><p>Email, messaging, collaboration tools</p></a>
+                                <a class="module-card" href="inform.html"><h3>Information &amp; Media Literacy</h3><p>Fact-checking, misinformation awareness</p></a>
+                                <a class="module-card" href="financial.html"><h3>Digital Financial Literacy</h3><p>Mobile money, digital banking, safety</p></a>
+                                <a class="module-card" href="productivity.html"><h3>Productivity &amp; Work Readiness</h3><p>Office tools, job applications, CVs</p></a>
+                                <a class="module-card" href="entrepreneurship.html"><h3>Digital Entrepreneurship</h3><p>Online business, e-commerce, marketing</p></a>
+                                <a class="module-card" href="citizenship.html"><h3>Responsible Digital Citizenship</h3><p>Ethics, rights, inclusive participation</p></a>
                             </div>
                             <p>Special attention is given to promoting digital inclusion for women, youth, persons with disabilities, rural communities, and other underserved groups. The program encourages equitable participation and seeks to ensure that everyone can benefit from the opportunities offered by digital technologies.</p><br>
                             <p>By the end of this training, participants will be better equipped to use digital tools confidently, protect themselves online, access information and services, enhance their livelihoods, and contribute positively to Zambia's growing digital economy.</p><br>
@@ -67,18 +67,6 @@
         <p>&copy; 2026 Zambian Cyber Security Initiative Foundation</p>
     </footer>
     <script>
-const pageTitles = {
-    home: 'Digital Bridges: Inclusive Digital Literacy Training for Communities in Zambia',
-    intro: 'Introduction to Digital Literacy',
-    safety: 'Online Safety and Cyber Hygiene',
-    communication: 'Digital Communication and Collaboration',
-    inform: 'Information and Media Literacy',
-    financial: 'Digital Financial Literacy',
-    productivity: 'Productivity and Work Readiness',
-    entrepreneurship: 'Digital Entrepreneurship',
-    citizenship: 'Responsible Digital Citizenship',
-  };
-
   // Scam card reveal
   function toggleScam(card) {
     card.classList.toggle('revealed');
@@ -105,23 +93,7 @@ const pageTitles = {
     document.getElementById(scoreId).textContent = checked + ' / ' + boxes.length + ' ' + label;
   });
 
-  function showPage(id, linkEl) {
-    document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
-    document.getElementById('page-' + id).classList.add('active');
-    document.getElementById('page-title').textContent = pageTitles[id];
-    document.querySelectorAll('.sidebar nav a').forEach(a => a.classList.remove('active'));
-    // If called from a module card (linkEl=null), find the matching sidebar link
-    if (linkEl) {
-      linkEl.classList.add('active');
-    } else {
-      const match = document.querySelector(`.sidebar nav a[onclick*="'${id}'"]`);
-      if (match) match.classList.add('active');
-    }
-    document.querySelector('.main-area').scrollTo({ top: 0, behavior: 'smooth' });
-    return false;
-  }
-
-  // ---- Responsive navigation: hamburger dropdown (mobile) / sidebar (desktop) ----
+// ---- Responsive navigation: hamburger dropdown (mobile) / sidebar (desktop) ----
   function toggleMenu() {
     const sidebar = document.getElementById('sidebar');
     const toggle = document.getElementById('menuToggle');
