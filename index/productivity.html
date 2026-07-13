@@ -23,6 +23,7 @@
             <nav>
                 <ul>
                         <li><a href="index.html" onclick="closeMenu();"><span class="material-symbols-outlined">home</span>Home</a></li>
+                        <li><a href="about.html" onclick="closeMenu();">About</a></li>
                         <li><a href="intro.html" onclick="closeMenu();">Intro to Digital Literacy</a></li>
                         <li><a href="safety.html" onclick="closeMenu();">Online Safety</a></li>
                         <li><a href="communication.html" onclick="closeMenu();">Digital Communication</a></li>
@@ -201,8 +202,30 @@
             </div>
         </div>
     </div>
-    <footer>
-        <p>&copy; 2026 Zambian Cyber Security Initiative Foundation</p>
+        <footer id="siteFooter">
+        <div class="footer-full" id="footerFull">
+            <div class="footer-inner">
+                <div class="footer-col">
+                    <strong>Zambian Cyber Security Initiative Foundation</strong>
+                    <p>Plot No. 945/5/1 Nalikwanda, Woodlands, Lusaka, Zambia</p>
+                </div>
+                <div class="footer-col">
+                    <strong>Contact</strong>
+                    <p><a href="tel:+260977601038">+260 977 601 038</a></p>
+                    <p><a href="mailto:frontdesk@zcsi-foundation.org">frontdesk@zcsi-foundation.org</a></p>
+                    <p><a href="https://zcsi-foundation.org" target="_blank" rel="noopener">zcsi-foundation.org</a></p>
+                </div>
+                <div class="footer-col">
+                    <strong>Follow the Foundation</strong>
+                    <div class="footer-social">
+                        <a href="https://www.facebook.com/ZCSIF/" target="_blank" rel="noopener">Facebook</a>
+                        <a href="https://x.com/cyberzambia" target="_blank" rel="noopener">X</a>
+                        <a href="https://www.instagram.com/cyberzambia/" target="_blank" rel="noopener">Instagram</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <p class="footer-copyright">&copy; 2026 Zambian Cyber Security Initiative Foundation</p>
     </footer>
     <script>
 // Scam card reveal
@@ -263,6 +286,38 @@
   document.addEventListener('keydown', function (e) {
     if (e.key === 'Escape') closeMenu();
   });
+
+  // ---- Plain sticky footer that expands into the full footer at the bottom of the page ----
+  (function () {
+    const footer = document.getElementById('siteFooter');
+    const scrollEl = document.querySelector('.main-area');
+    if (!footer || !scrollEl) return;
+
+    const BOTTOM_THRESHOLD = 4; // px of slack before we consider it "at the bottom"
+
+    function isAtBottom() {
+      return scrollEl.scrollTop + scrollEl.clientHeight >= scrollEl.scrollHeight - BOTTOM_THRESHOLD;
+    }
+
+    let ticking = false;
+    function updateFooterState() {
+      footer.classList.toggle('expanded', isAtBottom());
+      ticking = false;
+    }
+    function requestUpdate() {
+      if (!ticking) {
+        ticking = true;
+        window.requestAnimationFrame(updateFooterState);
+      }
+    }
+
+    scrollEl.addEventListener('scroll', requestUpdate);
+    window.addEventListener('resize', requestUpdate);
+    // Run once on load in case the page content is shorter than the viewport
+    // (nothing to scroll, so the "bottom" is already showing).
+    window.addEventListener('load', updateFooterState);
+    updateFooterState();
+  })();
 
     </script>
 </body>
