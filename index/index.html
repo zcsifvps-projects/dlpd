@@ -16,6 +16,25 @@
             </button>
             <h1 id="page-title"><img src="zcsif_logo.png" width="75" height="75" alt="ZCSIF logo"> Zambian Cyber Security Initiative Foundation</h1>
         </div>
+        <nav class="top-nav">
+            <ul>
+                        <li><a href="index.html" class="active">Home</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li class="has-dropdown">
+                            <button class="dropdown-toggle" type="button" aria-haspopup="true" aria-expanded="false">Training <span class="caret">&#9662;</span></button>
+                            <ul class="dropdown-menu">
+                                <li><a href="intro.html">Intro to Digital Literacy</a></li>
+                                <li><a href="safety.html">Online Safety</a></li>
+                                <li><a href="communication.html">Digital Communication</a></li>
+                                <li><a href="inform.html">Information Literacy</a></li>
+                                <li><a href="financial.html">Financial Literacy</a></li>
+                                <li><a href="productivity.html">Productivity</a></li>
+                                <li><a href="entrepreneurship.html">Entrepreneurship</a></li>
+                                <li><a href="citizenship.html">Digital Citizenship</a></li>
+                            </ul>
+                        </li>
+            </ul>
+        </nav>
     </header>
     <div class="shell">
         <div class="menu-overlay" id="menuOverlay" onclick="closeMenu()"></div>
@@ -24,14 +43,19 @@
                 <ul>
                         <li><a href="index.html" onclick="closeMenu();" class="active"><span class="material-symbols-outlined">home</span>Home</a></li>
                         <li><a href="about.html" onclick="closeMenu();">About</a></li>
-                        <li><a href="intro.html" onclick="closeMenu();">Intro to Digital Literacy</a></li>
-                        <li><a href="safety.html" onclick="closeMenu();">Online Safety</a></li>
-                        <li><a href="communication.html" onclick="closeMenu();">Digital Communication</a></li>
-                        <li><a href="inform.html" onclick="closeMenu();">Information Literacy</a></li>
-                        <li><a href="financial.html" onclick="closeMenu();">Financial Literacy</a></li>
-                        <li><a href="productivity.html" onclick="closeMenu();">Productivity</a></li>
-                        <li><a href="entrepreneurship.html" onclick="closeMenu();">Entrepreneurship</a></li>
-                        <li><a href="citizenship.html" onclick="closeMenu();">Digital Citizenship</a></li>
+                        <li class="mobile-training">
+                            <button class="mobile-training-toggle" type="button" onclick="toggleMobileTraining(this)">Training <span class="caret">&#9662;</span></button>
+                            <ul class="mobile-training-list">
+                                <li><a href="intro.html" onclick="closeMenu();">Intro to Digital Literacy</a></li>
+                                <li><a href="safety.html" onclick="closeMenu();">Online Safety</a></li>
+                                <li><a href="communication.html" onclick="closeMenu();">Digital Communication</a></li>
+                                <li><a href="inform.html" onclick="closeMenu();">Information Literacy</a></li>
+                                <li><a href="financial.html" onclick="closeMenu();">Financial Literacy</a></li>
+                                <li><a href="productivity.html" onclick="closeMenu();">Productivity</a></li>
+                                <li><a href="entrepreneurship.html" onclick="closeMenu();">Entrepreneurship</a></li>
+                                <li><a href="citizenship.html" onclick="closeMenu();">Digital Citizenship</a></li>
+                            </ul>
+                        </li>
                 </ul>
             </nav>
         </aside>
@@ -105,7 +129,7 @@
             <div class="footer-inner">
                 <div class="footer-col">
                     <strong>Zambian Cyber Security Initiative Foundation</strong>
-                    <p>Plot No. 945/5/1 Nalikwanda, Woodlands, Lusaka, Zambia</p>
+                    <p>Woodlands Mosi Tunya Road, Corner of Nalikwanda Road Plot 2, Lusaka, Zambia</p>
                 </div>
                 <div class="footer-col">
                     <strong>Contact</strong>
@@ -216,6 +240,30 @@
     window.addEventListener('load', updateFooterState);
     updateFooterState();
   })();
+
+
+  // ---- Desktop "Training" dropdown (click-to-toggle, plus CSS :hover) ----
+  document.querySelectorAll('.dropdown-toggle').forEach(function (btn) {
+    btn.addEventListener('click', function (e) {
+      e.stopPropagation();
+      const li = btn.closest('.has-dropdown');
+      const isOpen = li.classList.toggle('open');
+      btn.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+    });
+  });
+  document.addEventListener('click', function () {
+    document.querySelectorAll('.has-dropdown.open').forEach(function (li) {
+      li.classList.remove('open');
+      const btn = li.querySelector('.dropdown-toggle');
+      if (btn) btn.setAttribute('aria-expanded', 'false');
+    });
+  });
+
+  // ---- Mobile "Training" accordion inside the slide-out sidebar ----
+  function toggleMobileTraining(btn) {
+    const li = btn.closest('.mobile-training');
+    li.classList.toggle('open');
+  }
 
     </script>
 </body>
